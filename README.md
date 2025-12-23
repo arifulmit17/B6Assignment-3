@@ -8,3 +8,6 @@ The system had 3 tables ,
 
 the User table and vehicle table is connected to the bookings table by foreign key user_id and vehicle_id
 
+there are 4 queries given in this assignment:
+
+the first query uses inner join to show user name as customer name, vehicle name and booking information. It is done by joining users and vehicles table to the booking table depending on the foreign keys in the booking table.

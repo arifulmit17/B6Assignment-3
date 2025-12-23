@@ -44,3 +44,7 @@ INNER JOIN bookings b
   ON v.vehicle_id = b.vehicle_id
 GROUP BY v.vehicle_id, v.name
 HAVING COUNT(b.booking_id) > 2;
+
+-- output query 4
+"vehicle_name"	"total_bookings"
+"Honda Civic"	"3"

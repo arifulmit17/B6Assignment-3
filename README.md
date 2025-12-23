@@ -1,4 +1,4 @@
-In this project we have designed ER diagram for a vehicle rent system.
+In this assignment we have designed ER diagram for a vehicle rent system.
 
 The system had 3 tables , 
 
@@ -15,3 +15,5 @@ the first query uses inner join to show user name as customer name, vehicle name
 The second query uses where to identify vehicles that have never been rented, it uses inner join with bookings table to find out vehicles that have status available and has no previous completed or confirmed status.
 
 The third query user where to filter car type vehicles from vehicles table which also have status available.
+
+The fourth query uses inner join with bookings table and vehicles table, it counts total number of bookings a vehicle has had by using group by and having and if the count is larger than 2, the vehicle is shown in the output table.

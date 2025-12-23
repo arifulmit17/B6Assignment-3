@@ -3,7 +3,7 @@ select booking_id,start_date,end_date,u.name as customer_name,v.name as vehicle_
 inner join  users as u on b.user_id=u.user_id
 inner join  vehicles as v on b.vehicle_id=v.vehicle_id
 
-
+-- output query 1
 "booking_id"	"start_date"	"end_date"	"customer_name"	"vehicle_name"	"status"
 "1"	"2023-10-01"	"2023-10-05"	"Alina"	"Honda Civic"	"completed"
 "2"	"2023-11-01"	"2023-11-03"	"Alina"	"Honda Civic"	"completed"
@@ -20,6 +20,7 @@ inner join  vehicles as v on b.vehicle_id=v.vehicle_id
 -- query 2
 select * from vehicles where type='car' and status='available'
 
+-- output query 2
 "vehicle_id"	"name"	"type"	"model"	"registration_number"	"rental_price"	"status"
 "1"	"Toyota Corolla"	"car"	"2022"	"ABC-123"	"50"	"available"
 "3"	"Nissan Altima"	"car"	"2020"	"GHI-789"	"55"	"available"
@@ -31,7 +32,9 @@ select * from vehicles where type='car' and status='available'
 select v.vehicle_id,name,type,model,registration_number,rental_price,v.status from vehicles as v
 inner join bookings as b on v.vehicle_id=b.vehicle_id  where v.status <> 'rented' and b.status not in ('completed','confirmed')
 
-
+-- output query 3
+"vehicle_id"	"name"	"type"	"model"	"registration_number"	"rental_price"	"status"
+"3"	"Nissan Altima"	"car"	"2020"	"GHI-789"	"55"	"available"
 -- query 4
 SELECT 
   v.name as vehicle_name,
